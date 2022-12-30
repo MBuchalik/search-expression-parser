@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "es2022",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+
+    // Needed for Jest to import OhmJS. Otherwise, we get "Cannot read properties of undefined (reading 'grammar')"
+    "esModuleInterop": true,
+
+    "outDir": "dist",
+    "declaration": true,
+
+    "strict": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true
+  },
+
+  "include": ["src"]
+}

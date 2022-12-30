@@ -1,0 +1,48 @@
+{
+  "name": "search-expression-parser",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Martin Buchalik",
+  "description": "Parse ((possibly) nested) search expressions",
+  "keywords": [
+    "parser",
+    "search",
+    "query",
+    "boolean",
+    "nested"
+  ],
+  "files": [
+    "dist/"
+  ],
+  "type": "module",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist/",
+    "build": "npm run clean && npm run build-without-rm",
+    "build-without-rm": "rollup -c --bundleConfigAsCjs",
+    "lint": "eslint . --max-warnings=0",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MBuchalik/search-expression-parser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MBuchalik/search-expression-parser/issues"
+  },
+  "homepage": "https://github.com/MBuchalik/search-expression-parser#readme",
+  "dependencies": {
+    "micro-result": "^1.0.0",
+    "ohm-js": "^16.6.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^10.0.1",
+    "@types/jest": "^29.2.4",
+    "jest": "^29.3.1",
+    "rollup": "^3.8.1",
+    "ts-jest": "^29.0.3",
+    "ts-node": "^10.9.1"
+  }
+}
