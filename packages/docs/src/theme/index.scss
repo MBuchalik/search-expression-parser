@@ -1,0 +1,9 @@
+// It seems like some styles are not part of a Cascade Layer. See https://github.com/tailwindlabs/tailwindcss/discussions/6694
+@layer tw {
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+}
+
+@import '@fontsource/inter';
+@import '@fontsource/ibm-plex-mono';

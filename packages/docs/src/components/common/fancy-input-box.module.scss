@@ -1,0 +1,18 @@
+.container {
+  border: 3px solid theme('colors.neutral.300');
+  background: theme('colors.neutral.100');
+}
+.container:focus-within {
+  // See https://codyhouse.co/nuggets/css-gradient-borders
+  background: linear-gradient(
+        theme('colors.neutral.100'),
+        theme('colors.neutral.100')
+      )
+      padding-box,
+    linear-gradient(90deg, #1a15ff 0%, #ff098e 50%, #0acaff 100%) border-box;
+  border-color: transparent;
+}
+.container input {
+  border: none;
+  outline: none;
+}

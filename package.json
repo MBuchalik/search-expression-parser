@@ -2,13 +2,15 @@
   "name": "search-expression-parser-wrapper-project",
   "private": true,
   "workspaces": [
-    "packages/search-expression-parser"
+    "packages/search-expression-parser",
+    "packages/docs"
   ],
   "scripts": {
     "clean": "npm run clean --workspaces",
     "build": "npm run build --workspaces",
     "lint": "npm run lint --workspaces && npm run lint-additional-files",
-    "lint-additional-files": "prettier --check **/*.{md,json,yml}"
+    "lint-additional-files": "prettier --check **/*.{md,json,yml}",
+    "test": "npm run test --workspaces"
   },
   "devDependencies": {
     "eslint-config-mbuchalik": "^1.0.0",
