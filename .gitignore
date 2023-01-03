@@ -1,1 +1,4 @@
 node_modules/
+
+# When running "npm pack -w=search-expression-parser" locally (e.g. for testing purposes), a .tgz file gets created.
+/search-expression-parser-*.tgz
