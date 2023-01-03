@@ -9,7 +9,38 @@ on:
       - published
 
 jobs:
+  check-package-lock:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Check if package-lock.json is up to date
+        run: npx --yes package-lock-utd@latest
+
+  build:
+    needs: check-package-lock
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build all packages
+        run: npm run build
+
   lint:
+    needs: build
+
     runs-on: ubuntu-latest
 
     steps:
@@ -27,26 +58,9 @@ jobs:
       - name: Run the linter
         run: npm run lint
 
-  build:
-    needs: lint
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build all packages
-        run: npm run build
-
   publish:
     if: github.event_name == 'release'
-    needs: build
+    needs: lint
 
     runs-on: ubuntu-latest
 
