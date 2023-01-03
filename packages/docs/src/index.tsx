@@ -1,8 +1,10 @@
+// Import this css first so that Tailwind's definitions don't override ones we define in our components.
+import './theme/index.scss';
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import { App } from './app';
-import './theme/index.scss';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
