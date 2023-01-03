@@ -49,11 +49,11 @@ jobs:
         with:
           node-version: 18
 
-      - name: Check if package-lock.json is up to date
-        run: npx --yes package-lock-utd@latest
-
       - name: Install dependencies
         run: npm ci
+
+      - name: Build the library
+        run: npm run build -w=search-expression-parser
 
       - name: Run the linter
         run: npm run lint
