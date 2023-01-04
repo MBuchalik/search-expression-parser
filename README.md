@@ -13,3 +13,5 @@ is:archived AND (tag:production OR tag:development AND NOT author:"John Doe")
 ```
 
 ...into an easily processable tree structure.
+
+Visit the [docs](https://mbuchalik.github.io/search-expression-parser/) to learn more!
