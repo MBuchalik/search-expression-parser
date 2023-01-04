@@ -1,6 +1,7 @@
 {
   "name": "docs",
   "private": true,
+  "homepage": "mbuchalik.github.io/search-expression-parser",
   "scripts": {
     "start": "react-scripts start",
     "clean": "rimraf dist/",
