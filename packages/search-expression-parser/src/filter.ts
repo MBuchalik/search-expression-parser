@@ -1,4 +1,4 @@
-import type { ErrorResultWithData, SuccessResultWithData } from 'micro-result';
+import { ErrorResultWithData, SuccessResultWithData } from 'micro-result';
 
 import {
   AndNode,
