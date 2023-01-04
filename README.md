@@ -2,6 +2,8 @@
   <img src="./assets/logo-with-text.svg" alt="Logo" width="300px">
 </div>
 
+---
+
 > Parse ((possibly) nested) search expressions
 
 **search-expression-parser** turns search expressions like this:
