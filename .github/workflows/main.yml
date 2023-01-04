@@ -90,7 +90,7 @@ jobs:
     # Make sure this does not run on forked repos. Also, only run this when pushing to our main branch.
     if: |
       github.repository == 'MBuchalik/search-expression-parser' 
-      && github.ref == 'refs/head/main'
+      && github.ref == 'refs/heads/main'
       && github.event_name == 'push'
 
     needs: lint
