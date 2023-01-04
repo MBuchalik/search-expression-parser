@@ -38,7 +38,7 @@ jobs:
       - name: Build all packages
         run: npm run build
 
-  lint:
+  lint-and-test:
     needs: build
 
     runs-on: ubuntu-latest
@@ -58,9 +58,12 @@ jobs:
       - name: Run the linter
         run: npm run lint
 
+      - name: Run the tests
+        run: npm run test
+
   publish:
     if: github.event_name == 'release'
-    needs: lint
+    needs: lint-and-test
 
     runs-on: ubuntu-latest
 
@@ -93,7 +96,7 @@ jobs:
       && github.ref == 'refs/heads/main'
       && github.event_name == 'push'
 
-    needs: lint
+    needs: lint-and-test
 
     runs-on: ubuntu-latest
 
