@@ -78,6 +78,9 @@ jobs:
       - name: Build the library
         run: npm run build -w=search-expression-parser
 
+      - name: Copy the README file
+        run: cp ./README.md ./packages/search-expression-parser/README.md
+
       - name: Publish the package
         run: npm publish -w=search-expression-parser
         env:
