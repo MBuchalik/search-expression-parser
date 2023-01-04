@@ -30,7 +30,7 @@ export const HeroContent: React.FC = () => {
 
       <div>
         <FancyInputBox
-          initialValue='is:archived AND (tag:production OR tag:development AND NOT author:"John Doe")'
+          initialValue='is:archived AND (tag:production OR tag:dev AND NOT author:"John Doe")'
           autoFocus
           onChangeValue={(newValue): void => controller.setInputValue(newValue)}
         />

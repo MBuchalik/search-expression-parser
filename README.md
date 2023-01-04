@@ -9,7 +9,7 @@
 **search-expression-parser** turns search expressions like this:
 
 ```
-is:archived AND (tag:production OR tag:development AND NOT author:"John Doe")
+is:archived AND (tag:production OR tag:dev AND NOT author:"John Doe")
 ```
 
 ...into an easily processable tree structure.
