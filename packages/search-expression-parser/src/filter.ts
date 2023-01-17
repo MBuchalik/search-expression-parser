@@ -145,8 +145,6 @@ function dispatch<TItem, TError>(
       return context.dataMatcher(expressionNode, context.item);
     case ExpressionNodeType.Value:
       return context.dataMatcher(expressionNode, context.item);
-    case ExpressionNodeType.Literal:
-      throw Error('The dispatcher cannot handle Literals.');
   }
 }
 

@@ -3,8 +3,7 @@ export type ExpressionNode =
   | OrNode
   | NotNode
   | KeyValueNode
-  | ValueNode
-  | LiteralNode;
+  | ValueNode;
 
 export enum ExpressionNodeType {
   KeyValue = 'KEY-VALUE',
@@ -13,8 +12,6 @@ export enum ExpressionNodeType {
   And = 'AND',
   Or = 'OR',
   Not = 'NOT',
-
-  Literal = 'LITERAL',
 }
 
 export type Range = [number, number];
@@ -43,24 +40,26 @@ export interface NotNode extends NodeBase {
 export interface KeyValueNode extends NodeBase {
   type: ExpressionNodeType.KeyValue;
 
-  key: LiteralNode;
-  value: LiteralNode;
+  key: LiteralValue;
+  value: LiteralValue;
 }
 export interface ValueNode extends NodeBase {
   type: ExpressionNodeType.Value;
 
-  value: LiteralNode;
+  value: LiteralValue;
 }
-export type LiteralNode = RegularLiteralNode | QuotedLiteralNode;
-export interface RegularLiteralNode extends NodeBase {
-  type: ExpressionNodeType.Literal;
 
-  value: string;
+export type LiteralValue = RegularLiteralValue | QuotedLiteralValue;
+export interface RegularLiteralValue extends NodeBase {
+  /**
+   * The actual value, i.e. the string found in the search expression.
+   */
+  content: string;
 
   hasQuotes: false;
 }
-export interface QuotedLiteralNode
-  extends Omit<RegularLiteralNode, 'hasQuotes'> {
+export interface QuotedLiteralValue
+  extends Omit<RegularLiteralValue, 'hasQuotes'> {
   hasQuotes: true;
   rangeWithoutQuotes: Range;
 }

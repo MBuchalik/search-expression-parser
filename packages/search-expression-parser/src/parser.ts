@@ -7,7 +7,7 @@
 import type { Result } from 'micro-result';
 import ohm from 'ohm-js';
 
-import { ExpressionNode, ExpressionNodeType } from './models';
+import { ExpressionNode, ExpressionNodeType, LiteralValue } from './models';
 
 /*
   Regarding operator precedence:
@@ -93,7 +93,7 @@ const instantiatedGrammar = ohm.grammar(grammarSource);
 
 const semantics = instantiatedGrammar
   .createSemantics()
-  .addOperation<ExpressionNode | string>('eval', {
+  .addOperation<ExpressionNode | LiteralValue | string>('eval', {
     exp(_a, b, _c): ExpressionNode {
       return b.eval();
     },
@@ -159,7 +159,13 @@ const semantics = instantiatedGrammar
       };
     },
     singleExpression_onlyvalue(a): ExpressionNode {
-      return a.eval();
+      return {
+        range: [this.source.startIdx, this.source.endIdx],
+
+        type: ExpressionNodeType.Value,
+
+        value: a.eval(),
+      };
     },
     keyValueExpressionKey(a): ExpressionNode {
       return a.eval();
@@ -171,46 +177,38 @@ const semantics = instantiatedGrammar
       return a.eval();
     },
 
-    nonEmptyLiteralWithoutQuotes(a): ExpressionNode {
+    nonEmptyLiteralWithoutQuotes(a): LiteralValue {
       return {
         range: [this.source.startIdx, this.source.endIdx],
 
-        type: ExpressionNodeType.Literal,
-
-        value: a.sourceString,
+        content: a.sourceString,
 
         hasQuotes: false,
       };
     },
-    nonEmptyLiteralWithoutQuotesThatIsNotReserved(a): ExpressionNode {
+    nonEmptyLiteralWithoutQuotesThatIsNotReserved(a): LiteralValue {
       return {
         range: [this.source.startIdx, this.source.endIdx],
 
-        type: ExpressionNodeType.Literal,
-
-        value: a.sourceString,
+        content: a.sourceString,
 
         hasQuotes: false,
       };
     },
-    possiblyEmptyLiteralWithoutQuotes(a): ExpressionNode {
+    possiblyEmptyLiteralWithoutQuotes(a): LiteralValue {
       return {
         range: [this.source.startIdx, this.source.endIdx],
 
-        type: ExpressionNodeType.Literal,
-
-        value: a.sourceString,
+        content: a.sourceString,
 
         hasQuotes: false,
       };
     },
-    literalWithQuotes(_a, b, _c): ExpressionNode {
+    literalWithQuotes(_a, b, _c): LiteralValue {
       return {
         range: [this.source.startIdx, this.source.endIdx],
 
-        type: ExpressionNodeType.Literal,
-
-        value: b.sourceString,
+        content: b.sourceString,
 
         hasQuotes: true,
         rangeWithoutQuotes: [b.source.startIdx, b.source.endIdx],
