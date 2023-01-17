@@ -103,6 +103,16 @@ export const Usage: React.FC = () => {
       <div>
         <CodeViewer code={CODE_SAMPLE_FILTERING} />
       </div>
+
+      <div className={classNames('my-4')}>
+        The error reporting feature of the filter function only gets called when
+        a particular node is visited. Thus, it is not suited for cases where you
+        want to validate the entire search tree. In general, the built-in filter
+        function is great if you want to implement simple search features.
+        However, for more complex functionalities (e.g. type-safe validation
+        right after the parsing step), it might be necessary to directly work
+        with the search tree.
+      </div>
     </div>
   );
 };
