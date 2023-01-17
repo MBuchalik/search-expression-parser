@@ -6,10 +6,10 @@ import { CodeViewer } from './common/code-viewer';
 const CODE_SAMPLE_SIMPLE = `import { parse } from 'search-expression-parser';
 
 const mySearchExpression = 'name:john AND age:50';
-const parsedSearchExpression = parse(mySearchExpression);
+const parserResult = parse(mySearchExpression);
 
-if (parsedSearchExpression.success) {
-  console.log('Success!', parsedSearchExpression);
+if (parserResult.success) {
+  console.log('Success!', parserResult);
 } else {
   console.error('Something went wrong...');
 }
