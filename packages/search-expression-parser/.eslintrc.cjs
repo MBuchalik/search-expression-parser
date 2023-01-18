@@ -14,6 +14,10 @@ module.exports = {
     {
       files: ['*.ts'],
       extends: ['eslint-config-mbuchalik'],
+      plugins: ['node-imports'],
+      rules: {
+        'node-imports/no-node-import': 'error',
+      },
     },
   ],
 };
