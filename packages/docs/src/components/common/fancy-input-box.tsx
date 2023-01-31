@@ -2,6 +2,8 @@ import { ArrowUturnLeftIcon } from '@heroicons/react/24/outline';
 import classNames from 'classnames';
 import React from 'react';
 
+import { merge } from '../../utils/merge';
+
 import styles from './fancy-input-box.module.scss';
 import { RoundIconButton } from './round-icon-button';
 
@@ -99,10 +101,10 @@ function useController(props: Props): Controller {
     inputRef: inputRef,
 
     setValue: (newValue): void => {
-      setState((state) => ({ ...state, value: newValue }));
+      setState((state) => merge(state, { value: newValue }));
     },
     revertChanges: (): void => {
-      setState((state) => ({ ...state, value: props.initialValue }));
+      setState((state) => merge(state, { value: props.initialValue }));
     },
   };
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { merge } from '../../utils/merge';
+
 import { FancyInputBox } from './fancy-input-box';
 import { ParserResult } from './parser-result';
 
@@ -38,7 +40,7 @@ function useController(props: Props): Controller {
     state: state,
 
     setInputValue: (value): void => {
-      setState((state) => ({ ...state, inputValue: value }));
+      setState((state) => merge(state, { inputValue: value }));
     },
   };
 }

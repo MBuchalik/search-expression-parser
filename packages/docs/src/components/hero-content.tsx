@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import { merge } from '../utils/merge';
+
 import { FancyInputBox } from './common/fancy-input-box';
 import { ParserResult } from './common/parser-result';
 import styles from './hero-content.module.scss';
@@ -68,7 +70,7 @@ function useController(): Controller {
     state: state,
 
     setInputValue: (value): void => {
-      setState((state) => ({ ...state, inputValue: value }));
+      setState((state) => merge(state, { inputValue: value }));
     },
   };
 }

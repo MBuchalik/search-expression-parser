@@ -2,6 +2,8 @@ import { CheckIcon, ClipboardIcon } from '@heroicons/react/24/outline';
 import classNames from 'classnames';
 import React from 'react';
 
+import { merge } from '../../utils/merge';
+
 import { RoundIconButton } from './round-icon-button';
 
 interface Props {
@@ -65,9 +67,11 @@ function useController(props: Props): Controller {
 
     copySnippetToClipboard: (): void => {
       const CONFIRMATION_DURATION = 2000;
-      setState((state) => ({ ...state, showCopyToClipboardFeedback: true }));
+      setState((state) => merge(state, { showCopyToClipboardFeedback: true }));
       window.setTimeout(() => {
-        setState((state) => ({ ...state, showCopyToClipboardFeedback: false }));
+        setState((state) =>
+          merge(state, { showCopyToClipboardFeedback: false }),
+        );
       }, CONFIRMATION_DURATION);
 
       void navigator.clipboard.writeText(props.snippet);

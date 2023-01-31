@@ -2,6 +2,8 @@ import json5 from 'json5';
 import React from 'react';
 import { parse } from 'search-expression-parser';
 
+import { merge } from '../../utils/merge';
+
 import { CodeViewer } from './code-viewer';
 
 interface Props {
@@ -34,7 +36,7 @@ function useController(props: Props): Controller {
 
       const resultWithPrefix = `const parserResult = ${formattedParserResult};`;
 
-      setState((state) => ({ ...state, parserResult: resultWithPrefix }));
+      setState((state) => merge(state, { parserResult: resultWithPrefix }));
     }, DEBOUNCE_TIMEOUT_MILLIS);
 
     return (): void => {
