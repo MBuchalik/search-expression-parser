@@ -1,6 +1,6 @@
 {
   "name": "search-expression-parser",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "license": "MIT",
   "author": "Martin Buchalik",
   "description": "Parse ((possibly) nested) search expressions",
