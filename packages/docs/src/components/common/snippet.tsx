@@ -15,19 +15,10 @@ export const Snippet: React.FC<Props> = (props) => {
   return (
     <div
       className={classNames(
-        'flex',
-        'flex-row',
-        'px-4',
-        'py-2',
-        'rounded-[10px]',
-        'gap-6',
-        'items-center',
-        'bg-neutral-100',
-        'border-neutral-300',
-        'border-[3px]',
+        'flex flex-row items-center gap-6 rounded-[10px] border-[3px] border-neutral-300 bg-neutral-100 px-4 py-2',
       )}
     >
-      <div className={classNames('flex-grow', 'font-mono', 'select-all')}>
+      <div className={classNames('flex-grow select-all font-mono')}>
         {props.snippet}
       </div>
 

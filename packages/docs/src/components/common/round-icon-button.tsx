@@ -13,10 +13,7 @@ export const RoundIconButton: React.FC<Props> = (props) => {
     <button
       type="button"
       className={classNames(
-        'text-white',
-        'focus:outline-gray-800',
-        'p-2',
-        'rounded-full',
+        'rounded-full p-2 text-white focus:outline-gray-800',
         styles.button,
       )}
       disabled={props.disabled}

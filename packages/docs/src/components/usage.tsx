@@ -79,9 +79,7 @@ function dataMatcher(expressionNode, item) {
 export const Usage: React.FC = () => {
   return (
     <div>
-      <h2
-        className={classNames('font-bold', 'text-[1.75rem]', 'tracking-wider')}
-      >
+      <h2 className={classNames('text-[1.75rem] font-bold tracking-wider')}>
         Usage
       </h2>
 

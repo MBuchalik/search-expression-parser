@@ -13,7 +13,7 @@ export const CodeViewer: React.FC<Props> = (props) => {
   const controller = useController(props);
 
   return (
-    <div className={classNames('max-h-[500px]', 'overflow-auto')}>
+    <div className={classNames('max-h-[500px] overflow-auto')}>
       <div ref={controller.containerRef}></div>
     </div>
   );

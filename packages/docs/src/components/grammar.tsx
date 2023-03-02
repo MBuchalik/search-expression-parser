@@ -6,9 +6,7 @@ import { ParserInputAndPreview } from './common/parser-input-and-preview';
 export const Grammar: React.FC = () => {
   return (
     <div>
-      <h2
-        className={classNames('font-bold', 'text-[1.75rem]', 'tracking-wider')}
-      >
+      <h2 className={classNames('text-[1.75rem] font-bold tracking-wider')}>
         Grammar
       </h2>
 
@@ -48,9 +46,7 @@ interface GrammarSampleProps {
 const GrammarSample: React.FC<GrammarSampleProps> = (props) => {
   return (
     <div className={classNames('my-8')}>
-      <h3 className={classNames('font-medium', 'text-2xl', 'mb-2')}>
-        {props.title}
-      </h3>
+      <h3 className={classNames('mb-2 text-2xl font-medium')}>{props.title}</h3>
 
       {props.description !== undefined && (
         <div className={classNames('mb-4')}>{props.description}</div>

@@ -6,9 +6,7 @@ import { Snippet } from './common/snippet';
 export const Installation: React.FC = () => {
   return (
     <div>
-      <h2
-        className={classNames('font-bold', 'text-[1.75rem]', 'tracking-wider')}
-      >
+      <h2 className={classNames('text-[1.75rem] font-bold tracking-wider')}>
         Installation
       </h2>
 

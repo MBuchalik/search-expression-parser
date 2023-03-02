@@ -15,10 +15,7 @@ export const HeroContent: React.FC = () => {
       <div>
         <h1
           className={classNames(
-            'font-mono',
-            'inline',
-            'text-4xl',
-            'font-bold',
+            'inline font-mono text-4xl font-bold',
             styles.fancyHeading,
           )}
         >
@@ -26,7 +23,7 @@ export const HeroContent: React.FC = () => {
         </h1>
       </div>
 
-      <div className={classNames('font-bold', 'my-4')}>
+      <div className={classNames('my-4 font-bold')}>
         Turn a search expression like this:
       </div>
 
@@ -38,7 +35,7 @@ export const HeroContent: React.FC = () => {
         />
       </div>
 
-      <div className={classNames('font-bold', 'my-4')}>
+      <div className={classNames('my-4 font-bold')}>
         ...into an easily processable tree structure like this:
       </div>
 
