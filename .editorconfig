@@ -1,0 +1,2 @@
+# Make sure that Prettier (or similar tools) do not load .editorconfig files from the parent folder (or its parent folder or...).
+root = true
