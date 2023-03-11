@@ -3,13 +3,14 @@
   "private": true,
   "homepage": "https://mbuchalik.github.io/search-expression-parser",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "vite",
+    "preview": "vite preview",
     "clean": "rimraf dist/",
-    "build": "npm run clean && react-scripts build",
+    "build": "npm run clean && tsc && vite build",
     "lint": "eslint . --max-warnings=0",
-    "test": "echo 'No tests were defined for \"docs\"'",
-    "eject": "react-scripts eject"
+    "test": "echo 'No tests were defined for \"docs\"'"
   },
+  "type": "module",
   "dependencies": {
     "@codemirror/lang-javascript": "^6.1.4",
     "@fontsource/ibm-plex-mono": "^4.5.13",
@@ -24,8 +25,9 @@
   "devDependencies": {
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "react-scripts": "5.0.1",
-    "sass": "^1.58.3",
-    "tailwindcss": "^3.2.7"
+    "@vitejs/plugin-react": "^3.1.0",
+    "autoprefixer": "^10.4.14",
+    "tailwindcss": "^3.2.7",
+    "vite": "^4.1.0"
   }
 }
