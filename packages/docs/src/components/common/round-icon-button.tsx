@@ -1,8 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import styles from './round-icon-button.module.scss';
-
 interface Props {
   icon: React.ReactElement;
   disabled?: boolean;
@@ -13,8 +11,7 @@ export const RoundIconButton: React.FC<Props> = (props) => {
     <button
       type="button"
       className={classNames(
-        'rounded-full p-2 text-white focus:outline-gray-800',
-        styles.button,
+        'box-content h-5 w-5 rounded-full bg-[#ff098e] p-2 text-white focus:outline-gray-800 enabled:hover:bg-[#ff3da6] disabled:opacity-20',
       )}
       disabled={props.disabled}
       onClick={(): void => props.onClick()}

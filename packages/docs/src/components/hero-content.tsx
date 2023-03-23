@@ -5,7 +5,6 @@ import { merge } from '../utils/merge';
 
 import { FancyInputBox } from './common/fancy-input-box';
 import { ParserResult } from './common/parser-result';
-import styles from './hero-content.module.scss';
 
 export const HeroContent: React.FC = () => {
   const controller = useController();
@@ -15,8 +14,7 @@ export const HeroContent: React.FC = () => {
       <div>
         <h1
           className={classNames(
-            'inline font-mono text-4xl font-bold',
-            styles.fancyHeading,
+            'inline bg-gradient-to-r from-[#1a15ff] via-[#ff098e] to-[#0acaff] bg-clip-text font-mono text-4xl font-bold text-transparent',
           )}
         >
           search-expression-parser

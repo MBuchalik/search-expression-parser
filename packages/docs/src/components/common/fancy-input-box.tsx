@@ -31,7 +31,9 @@ export const FancyInputBox: React.FC<Props> = (props) => {
         <input
           ref={controller.inputRef}
           type="text"
-          className={classNames('w-full bg-transparent p-1 font-mono')}
+          className={classNames(
+            'w-full border-none bg-transparent p-1 font-mono outline-none',
+          )}
           value={controller.state.value}
           onChange={(e): void => controller.setValue(e.target.value)}
         />
