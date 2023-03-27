@@ -2,5 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@import '@fontsource/inter';
-@import '@fontsource/ibm-plex-mono';
+@import '@fontsource/inter/300';
+@import '@fontsource/inter/400';
+@import '@fontsource/inter/500';
+@import '@fontsource/inter/700';
+
+@import '@fontsource/ibm-plex-mono/300';
+@import '@fontsource/ibm-plex-mono/400';
+@import '@fontsource/ibm-plex-mono/500';
+@import '@fontsource/ibm-plex-mono/700';
