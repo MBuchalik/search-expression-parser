@@ -2,7 +2,6 @@ import { javascript } from '@codemirror/lang-javascript';
 import { foldGutter } from '@codemirror/language';
 import { EditorState, Extension } from '@codemirror/state';
 import { lineNumbers } from '@codemirror/view';
-import classNames from 'classnames';
 import { EditorView, minimalSetup } from 'codemirror';
 import React from 'react';
 
@@ -13,7 +12,7 @@ export const CodeViewer: React.FC<Props> = (props) => {
   const controller = useController(props);
 
   return (
-    <div className={classNames('max-h-[500px] overflow-auto')}>
+    <div className="max-h-[500px] overflow-auto">
       <div ref={controller.containerRef}></div>
     </div>
   );

@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import React from 'react';
 
 import { merge } from '../utils/merge';
@@ -12,18 +11,12 @@ export const HeroContent: React.FC = () => {
   return (
     <div>
       <div>
-        <h1
-          className={classNames(
-            'inline bg-gradient-to-r from-[#1a15ff] via-[#ff098e] to-[#0acaff] bg-clip-text font-mono text-4xl font-bold text-transparent',
-          )}
-        >
+        <h1 className="inline bg-gradient-to-r from-[#1a15ff] via-[#ff098e] to-[#0acaff] bg-clip-text font-mono text-4xl font-bold text-transparent">
           search-expression-parser
         </h1>
       </div>
 
-      <div className={classNames('my-4 font-bold')}>
-        Turn a search expression like this:
-      </div>
+      <div className="my-4 font-bold">Turn a search expression like this:</div>
 
       <div>
         <FancyInputBox
@@ -33,7 +26,7 @@ export const HeroContent: React.FC = () => {
         />
       </div>
 
-      <div className={classNames('my-4 font-bold')}>
+      <div className="my-4 font-bold">
         ...into an easily processable tree structure like this:
       </div>
 

@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import React from 'react';
 
 import { ParserInputAndPreview } from './common/parser-input-and-preview';
@@ -6,11 +5,9 @@ import { ParserInputAndPreview } from './common/parser-input-and-preview';
 export const Grammar: React.FC = () => {
   return (
     <div>
-      <h2 className={classNames('text-[1.75rem] font-bold tracking-wider')}>
-        Grammar
-      </h2>
+      <h2 className="text-[1.75rem] font-bold tracking-wider">Grammar</h2>
 
-      <div className={classNames('my-4')}>
+      <div className="my-4">
         Search expressions are pretty versatile. In the following, you can find
         a list of examples that show the possible search expressions. The
         examples are interactive, so you can always make changes to them if you
@@ -45,11 +42,11 @@ interface GrammarSampleProps {
 }
 const GrammarSample: React.FC<GrammarSampleProps> = (props) => {
   return (
-    <div className={classNames('my-8')}>
-      <h3 className={classNames('mb-2 text-2xl font-medium')}>{props.title}</h3>
+    <div className="my-8">
+      <h3 className="mb-2 text-2xl font-medium">{props.title}</h3>
 
       {props.description !== undefined && (
-        <div className={classNames('mb-4')}>{props.description}</div>
+        <div className="mb-4">{props.description}</div>
       )}
 
       <ParserInputAndPreview initialValue={props.query} />

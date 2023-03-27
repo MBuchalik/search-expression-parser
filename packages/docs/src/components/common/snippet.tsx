@@ -1,5 +1,4 @@
 import { CheckIcon, ClipboardIcon } from '@heroicons/react/24/outline';
-import classNames from 'classnames';
 import React from 'react';
 
 import { merge } from '../../utils/merge';
@@ -13,16 +12,10 @@ export const Snippet: React.FC<Props> = (props) => {
   const controller = useController(props);
 
   return (
-    <div
-      className={classNames(
-        'flex flex-row items-center gap-6 rounded-[10px] border-[3px] border-neutral-300 bg-neutral-100 px-4 py-2',
-      )}
-    >
-      <div className={classNames('flex-grow select-all font-mono')}>
-        {props.snippet}
-      </div>
+    <div className="flex flex-row items-center gap-6 rounded-[10px] border-[3px] border-neutral-300 bg-neutral-100 px-4 py-2">
+      <div className="flex-grow select-all font-mono">{props.snippet}</div>
 
-      <div className={classNames('flex-shrink-0')}>
+      <div className="flex-shrink-0">
         <RoundIconButton
           icon={
             controller.state.showCopyToClipboardFeedback ? (

@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import React from 'react';
 
 import { Grammar } from './components/grammar';
@@ -14,32 +13,32 @@ export const App: React.FC = () => {
       <a
         href="https://github.com/MBuchalik/search-expression-parser"
         target="_blank"
-        className={classNames('absolute top-2 right-2')}
+        className="absolute top-2 right-2"
         rel="noreferrer"
       >
         <img
           src={githubMark}
           alt="GitHub Logo"
-          className={classNames('w-10 hover:opacity-80')}
+          className="w-10 hover:opacity-80"
         ></img>
       </a>
 
-      <div className={classNames('mx-auto w-[900px] p-8')}>
-        <div className={classNames('mb-16')}>
+      <div className="mx-auto w-[900px] p-8">
+        <div className="mb-16">
           <HeroContent />
         </div>
 
-        <hr className={classNames('block h-1 border-none bg-neutral-200')} />
+        <hr className="block h-1 border-none bg-neutral-200" />
 
-        <div className={classNames('mt-16')}>
+        <div className="mt-16">
           <Installation />
         </div>
 
-        <div className={classNames('mt-8')}>
+        <div className="mt-8">
           <Usage />
         </div>
 
-        <div className={classNames('mt-8')}>
+        <div className="mt-8">
           <Grammar />
         </div>
       </div>

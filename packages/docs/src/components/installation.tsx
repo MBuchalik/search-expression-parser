@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import React from 'react';
 
 import { Snippet } from './common/snippet';
@@ -6,11 +5,9 @@ import { Snippet } from './common/snippet';
 export const Installation: React.FC = () => {
   return (
     <div>
-      <h2 className={classNames('text-[1.75rem] font-bold tracking-wider')}>
-        Installation
-      </h2>
+      <h2 className="text-[1.75rem] font-bold tracking-wider">Installation</h2>
 
-      <div className={classNames('my-4')}>
+      <div className="my-4">
         To install search-expression-parser, simply run:
       </div>
 

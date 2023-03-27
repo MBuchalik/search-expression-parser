@@ -31,15 +31,13 @@ export const FancyInputBox: React.FC<Props> = (props) => {
         <input
           ref={controller.inputRef}
           type="text"
-          className={classNames(
-            'w-full border-none bg-transparent p-1 font-mono outline-none',
-          )}
+          className="w-full border-none bg-transparent p-1 font-mono outline-none"
           value={controller.state.value}
           onChange={(e): void => controller.setValue(e.target.value)}
         />
       </div>
 
-      <div className={classNames('flex-shrink-0')}>
+      <div className="flex-shrink-0">
         <RoundIconButton
           icon={<ArrowUturnLeftIcon />}
           disabled={controller.state.value === props.initialValue}
