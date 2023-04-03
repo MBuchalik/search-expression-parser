@@ -5,7 +5,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 
 import type { Result } from 'micro-result';
-import ohm from 'ohm-js';
+import * as ohm from 'ohm-js';
 
 import { ExpressionNode, ExpressionNodeType, LiteralValue } from './models';
 
