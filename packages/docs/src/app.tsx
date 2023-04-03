@@ -13,7 +13,7 @@ export const App: React.FC = () => {
       <a
         href="https://github.com/MBuchalik/search-expression-parser"
         target="_blank"
-        className="absolute top-2 right-2"
+        className="absolute right-2 top-2"
         rel="noreferrer"
       >
         <img
