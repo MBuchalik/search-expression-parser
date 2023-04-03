@@ -15,7 +15,7 @@
     "@codemirror/lang-javascript": "^6.1.4",
     "@fontsource/ibm-plex-mono": "^4.5.13",
     "@fontsource/inter": "^4.5.15",
-    "@heroicons/react": "^2.0.16",
+    "@heroicons/react": "^2.0.17",
     "classnames": "^2.3.2",
     "codemirror": "^6.0.1",
     "json5": "^2.2.3",
@@ -23,11 +23,11 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.0.28",
+    "@types/react": "^18.0.32",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.14",
-    "tailwindcss": "^3.2.7",
-    "vite": "^4.1.0"
+    "tailwindcss": "^3.3.1",
+    "vite": "^4.2.1"
   }
 }
