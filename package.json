@@ -13,10 +13,10 @@
     "test": "npm run test --workspaces"
   },
   "devDependencies": {
-    "eslint-config-mbuchalik": "^1.2.0",
-    "micro-result": "^1.0.1",
-    "prettier-plugin-tailwindcss": "^0.2.6",
-    "rimraf": "^4.4.1",
-    "typescript": "^5.0.3"
+    "eslint-config-mbuchalik": "^1.2.1",
+    "micro-result": "^1.0.3",
+    "prettier-plugin-tailwindcss": "^0.2.7",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.4"
   }
 }
