@@ -17,6 +17,7 @@
   "type": "module",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": "./dist/index.js",
   "scripts": {
     "clean": "rimraf dist/",
     "build": "npm run clean && npm run build-without-rm",
